@@ -11,7 +11,7 @@ import lombok.*;
 @AllArgsConstructor
 @ToString
 public class Task {
-
+//L
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY) // ✅ Use IDENTITY strategy
     private Long id;
