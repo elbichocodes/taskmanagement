@@ -1,10 +1,7 @@
 package com.taskmanager.entity;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -14,7 +11,7 @@ import java.util.Set;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "users") // Changed table name to 'users'
+@Table(name = "users") // Ensure table name is correct
 public class User {
 
     @Id
@@ -37,14 +34,4 @@ public class User {
             inverseJoinColumns = @JoinColumn(name = "role_id")
     )
     private Set<Role> roles = new HashSet<>();
-
-    // Constructors, getters, setters (already provided by Lombok)
-
-    public void addRole(Role role) {
-        this.roles.add(role);
-    }
-
-    public void removeRole(Role role) {
-        this.roles.remove(role);
-    }
 }

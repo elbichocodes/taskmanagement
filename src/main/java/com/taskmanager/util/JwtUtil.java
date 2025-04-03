@@ -6,11 +6,11 @@ import com.auth0.jwt.algorithms.Algorithm;
 import com.auth0.jwt.interfaces.DecodedJWT;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.core.userdetails.UserDetails;
-import org.springframework.stereotype.Component;
+// import org.springframework.stereotype.Component; // Remove this line
 
 import java.util.Date;
 
-@Component
+// @Component // Remove this line
 public class JwtUtil {
 
     @Value("${jwt.secret}")

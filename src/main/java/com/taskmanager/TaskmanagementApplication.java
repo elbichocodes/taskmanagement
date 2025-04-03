@@ -1,12 +1,14 @@
 package com.taskmanager;
 
+import com.taskmanager.config.SecurityConfig;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import io.swagger.v3.oas.annotations.OpenAPIDefinition;
-import io.swagger.v3.oas.annotations.info.Info;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Import;
 
 @SpringBootApplication
-@OpenAPIDefinition(info = @Info(title = "Task Management API", version = "1.0", description = "API for managing tasks"))
+@ComponentScan("com.taskmanager") // Ensure this line exists
+@Import(SecurityConfig.class) // Keep this for now
 public class TaskmanagementApplication {
 
 	public static void main(String[] args) {
