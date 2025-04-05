@@ -39,7 +39,7 @@ public class EmailServiceImpl implements EmailService {
             helper.setTo(toEmail.trim()); // Trim the recipient email for safety
             helper.setSubject("Password Reset Request");
 
-            String resetLink = frontendUrl + "/reset-password?token=" + token;
+            String resetLink = frontendUrl + "reset-password?token=" + token;
             String emailBody = "<p>You have requested a password reset.</p>"
                     + "<p>Please click on the following link to reset your password:</p>"
                     + "<p><a href=\"" + resetLink + "\">" + resetLink + "</a></p>"
