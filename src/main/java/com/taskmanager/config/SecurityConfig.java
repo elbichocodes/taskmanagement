@@ -61,10 +61,14 @@ public class SecurityConfig {
                 .csrf(AbstractHttpConfigurer::disable)
                 .sessionManagement(configurer -> configurer.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .authorizeHttpRequests(authz -> authz
-                        .requestMatchers(HttpMethod.GET, "/dashboard").authenticated() // Explicitly require auth for dashboard
+                        .requestMatchers(HttpMethod.GET, "/dashboard").authenticated()
                         .requestMatchers(HttpMethod.GET, "/testdb/insertuser").permitAll()
                         .requestMatchers(HttpMethod.POST, "/auth/register").permitAll()
                         .requestMatchers(HttpMethod.POST, "/auth/login").permitAll()
+                        // Added this line to permit POST requests to /auth/forgot-password
+                        .requestMatchers(HttpMethod.POST, "/auth/forgot-password").permitAll()
+                        // Added this line to permit POST requests to /auth/reset-password
+                        .requestMatchers(HttpMethod.POST, "/auth/reset-password").permitAll()
                         .requestMatchers("/swagger-ui/**", "/v3/api-docs/**").permitAll()
                         .anyRequest().authenticated()
                 )
