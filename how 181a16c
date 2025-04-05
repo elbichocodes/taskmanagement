@@ -1,0 +1,22 @@
+[33m2f5675e[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32msmtp[m[33m, [m[1;31morigin/smtp[m[33m, [m[1;31morigin/authenticationerror[m[33m)[m HEAD@{0}: checkout: moving from main to smtp
+[33m3708d28[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/3rdapril[m[33m, [m[1;32mmain[m[33m, [m[1;32m3rdapril[m[33m)[m HEAD@{1}: checkout: moving from smtp to main
+[33m2f5675e[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32msmtp[m[33m, [m[1;31morigin/smtp[m[33m, [m[1;31morigin/authenticationerror[m[33m)[m HEAD@{2}: checkout: moving from authenticationerror to smtp
+[33m181a16c[m[33m ([m[1;32mauthenticationerror[m[33m)[m HEAD@{3}: commit: implement a smptp for reseting pasword
+[33m2f5675e[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32msmtp[m[33m, [m[1;31morigin/smtp[m[33m, [m[1;31morigin/authenticationerror[m[33m)[m HEAD@{4}: commit: FIxed the incorrect username/password error on login
+[33m3708d28[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/3rdapril[m[33m, [m[1;32mmain[m[33m, [m[1;32m3rdapril[m[33m)[m HEAD@{5}: checkout: moving from 3rdapril to authenticationerror
+[33m3708d28[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/3rdapril[m[33m, [m[1;32mmain[m[33m, [m[1;32m3rdapril[m[33m)[m HEAD@{6}: reset: moving to HEAD
+[33m3708d28[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/3rdapril[m[33m, [m[1;32mmain[m[33m, [m[1;32m3rdapril[m[33m)[m HEAD@{7}: checkout: moving from 3rdapril to 3rdapril
+[33m3708d28[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/3rdapril[m[33m, [m[1;32mmain[m[33m, [m[1;32m3rdapril[m[33m)[m HEAD@{8}: checkout: moving from main to 3rdapril
+[33m3708d28[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/3rdapril[m[33m, [m[1;32mmain[m[33m, [m[1;32m3rdapril[m[33m)[m HEAD@{9}: merge 3rdapril: Fast-forward
+[33m9ea98cd[m HEAD@{10}: checkout: moving from 3rdapril to main
+[33m3708d28[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/3rdapril[m[33m, [m[1;32mmain[m[33m, [m[1;32m3rdapril[m[33m)[m HEAD@{11}: commit: implemented JWT
+[33m9ea98cd[m HEAD@{12}: checkout: moving from main to 3rdapril
+[33m9ea98cd[m HEAD@{13}: pull origin main --rebase (finish): returning to refs/heads/main
+[33m9ea98cd[m HEAD@{14}: pull origin main --rebase (pick): added h2 db for in memorydb testing with swagger in working condition
+[33mb41f883[m HEAD@{15}: pull origin main --rebase (start): checkout b41f883c433ec89816c2ae967f7fc4d59f0b4782
+[33m18ecf1c[m HEAD@{16}: reset: moving to HEAD
+[33m18ecf1c[m HEAD@{17}: commit: added h2 db for in memorydb testing with swagger in working condition
+[33m396f7d7[m HEAD@{18}: commit (merge): 2nd
+[33m9be7391[m[33m ([m[1;31morigin/master[m[33m, [m[1;32mmaster[m[33m)[m HEAD@{19}: checkout: moving from master to main
+[33m9be7391[m[33m ([m[1;31morigin/master[m[33m, [m[1;32mmaster[m[33m)[m HEAD@{20}: commit: 1ST CHANGE
+[33m4dc871d[m HEAD@{21}: commit (initial): Initial commit

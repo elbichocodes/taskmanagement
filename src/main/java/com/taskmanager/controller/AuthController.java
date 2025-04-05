@@ -183,7 +183,6 @@ public class AuthController {
             return ResponseEntity.ok(new ErrorResponse("If an account with that email exists, a password reset link has been sent."));
         }
 
-        // Check for existing active password reset token for this user
         PasswordResetToken existingToken = passwordResetTokenRepository.findByUserAndExpiryDateAfter(user, LocalDateTime.now()).orElse(null);
 
         if (existingToken != null) {
@@ -198,8 +197,18 @@ public class AuthController {
         resetToken.setExpiryDate(LocalDateTime.now().plusHours(1));
         passwordResetTokenRepository.save(resetToken);
 
-        String resetLink = frontendUrl + "/reset-password?token=" + token;
-        emailService.sendPasswordResetEmail(email, resetLink);
+        // Apply the change here:
+        System.out.println("Raw frontendUrl from config: \"" + frontendUrl + "\"");
+        String cleanFrontendUrl = frontendUrl;
+        if (cleanFrontendUrl.endsWith("/")) {
+            cleanFrontendUrl = cleanFrontendUrl.substring(0, cleanFrontendUrl.length() - 1);
+        }
+        System.out.println("Cleaned frontendUrl: \"" + cleanFrontendUrl + "\"");
+
+        String resetLink = cleanFrontendUrl + "/reset-password/" + token;
+        System.out.println("Generated resetLink: \"" + resetLink + "\"");
+
+        emailService.sendPasswordResetEmail(email, token);
 
         return ResponseEntity.ok(new ErrorResponse("If an account with that email exists, a password reset link has been sent. Please check your inbox (and spam folder)."));
     }
